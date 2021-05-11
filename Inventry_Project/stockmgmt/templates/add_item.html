@@ -1,14 +1,12 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>{{title}}</title>
-</head>
-<body>
+{%extends "home.html"%}
+{% load crispy_forms_tags %}
+{%load static %}
+{% block content %}
 	<form method='POST' action=''>
-		{% csrf_token %}
-		{{form}}
-        <input type="submit" value='Save'/>
-    </form>
-
-</body>
-</html>
+		<div class="form-group">
+			{% csrf_token %}
+			{{form|crispy}}
+			<input type="submit" value='Save'/>
+		</div>
+	  </form>
+{%endblock%}
