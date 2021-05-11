@@ -31,7 +31,7 @@
 					<td>{{instance.category}}</td>
 					<td><a href="{% url 'update_items' instance.id %}">{{instance.item_name}}</a></td>
 					<td>{{instance.quantity}}</td>
-					<td><a href="{% url 'delete_items' instance.id %}">Delete</a></td>
+					<td><a href="{% url 'delete_items' instance.id %}"><button type="button" class="btn btn-danger">Delete</button></a></td>
 				</tr>
 				{% endfor %}
 			</tbody>
