@@ -31,16 +31,9 @@
         
                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                     <div class="navbar-nav">
-                        <a href="#" class="nav-item nav-link active">Home</a>
-                        <a href="#" class="nav-item nav-link">Profile</a>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Messages</a>
-                            <div class="dropdown-menu">
-                                <a href="#" class="dropdown-item">Inbox</a>
-                                <a href="#" class="dropdown-item">Sent</a>
-                                <a href="#" class="dropdown-item">Drafts</a>
-                            </div>
-                        </div>
+                        <a href="{% url 'home' %}" class="nav-item nav-link active">Home</a>
+                        <a href="{% url 'list_item' %}" class="nav-item nav-link">List Items</a>
+                        <a href="{% url 'add_items' %}" class="nav-item nav-link">Add Items</a>
                     </div>
                     <form class="form-inline">
                         <div class="input-group">                    
