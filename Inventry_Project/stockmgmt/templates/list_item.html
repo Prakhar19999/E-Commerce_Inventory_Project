@@ -21,6 +21,7 @@
 				<th>CATEGORY</th>
 				<th>Item NAME</th>
 				<th>QUANTITY in the Stock</th>
+				<th>Delete Item</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -30,6 +31,7 @@
 					<td>{{instance.category}}</td>
 					<td><a href="{% url 'update_items' instance.id %}">{{instance.item_name}}</a></td>
 					<td>{{instance.quantity}}</td>
+					<td><a href="{% url 'delete_items' instance.id %}">Delete</a></td>
 				</tr>
 				{% endfor %}
 			</tbody>
